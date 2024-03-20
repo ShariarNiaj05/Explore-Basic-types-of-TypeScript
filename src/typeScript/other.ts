@@ -1,0 +1,1 @@
+console.log('Root dir and Out dir testing');
