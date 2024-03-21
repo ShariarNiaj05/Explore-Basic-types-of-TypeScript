@@ -1,6 +1,6 @@
 // Normal function
 
-function add(num1: number, num2: number): number {
+/* function add(num1: number, num2: number): number {
   return num1 + num2;
 }
 
@@ -25,4 +25,32 @@ const person: {
   addBalance(money: number) {
     return this.balance + money;
   },
-};
+}; */
+
+// ----------------------------------
+
+// Default Parameter
+// We can't use default parameter to the first argument.
+
+function add(num1: number, num2: number = 20): number {
+  return num1 + num2;
+}
+
+// console.log(add(2, 5));
+
+// spread Operator
+const myFriends = ["chandler", "Joey"];
+const newFriends = ["monica", "rachel"];
+
+myFriends.push(...newFriends);
+
+// console.log(myFriends);
+
+// rest Parameter
+//  oposite of spread operator. Spread operator distinct element from an array, where as REST operator joint the element of an array
+
+const greetFriends = (...friends: string[]): void => friends.forEach(friend => {
+    console.log(`Hi ${friend}`);
+});;
+
+greetFriends("chandler", "Joey", "monica", "rachel", 'No Name')
